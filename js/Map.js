@@ -3,7 +3,7 @@ map = L.map('mapDiv', {
         bounds: L.bounds([-870.0, -505.0], [870.0, 505]),
         origin: L.point(0, 0),
     }),
-    center: [-5, 15],
+    center: [-4.5, 13],
     zoomControl: false,
     maxZoom: 18,
     zoom: 8

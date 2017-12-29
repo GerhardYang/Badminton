@@ -26,3 +26,11 @@ function loadHeatMap(arr) {
         minOpacity: 0.5
     }).addTo(map);
 }
+
+/**
+ * 清除所有
+ */
+function clearAll(){
+	//移除热力图图层
+	map.removeLayer(resultLayer);
+}

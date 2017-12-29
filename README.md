@@ -5,5 +5,5 @@
 
 ## 项目地址： 
 
-## 贡献者： Gerhard  Alan
+## 贡献者： Gerhard  Alanwhy
 

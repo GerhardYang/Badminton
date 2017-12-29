@@ -1,0 +1,152 @@
+body{
+    overflow: hidden;
+}
+
+#mapDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    z-index: -9999;
+}
+
+.smControlAttribution {
+    color: #fff;
+    right: 20px;
+    bottom: 10px;
+    font-size: 26px;
+}
+
+.floatBar {
+    position: absolute;
+    background: rgba(100, 100, 100, 0.6);
+    /* border-radius: 3px;*/
+}
+
+.topBar {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.topBar .content {
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.content .legend {
+    float: left;
+    width: 240px;
+    height: 57px;
+}
+
+.legend-content {
+    margin-left: 40px;
+    height: 60px;
+}
+
+.content .legend-colordiv {
+    height: 40px;
+}
+
+.content .legend-color {
+    float: left;
+    margin: 0 6px;
+     margin-top: 5px;
+    width: 50px;
+    height: 30px;
+    border-radius: 3px;
+}
+ .lgd1 {
+
+    background-color: #79E8D0;
+}
+ .lgd2 {
+    
+    background-color: #ffff00;
+}
+ .lgd3 {
+    
+    background-color: #fff;
+}
+
+.content .legend-namediv {
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.content .legend-name {
+    float: left;
+    width: 62px;
+    color: #fff;
+    font-weight: 300;
+    font-weight: normal;
+    font-size: 8px;
+}
+
+.content .nav-title {
+    float: left;
+    margin-left: 15px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 60px;
+    margin-top: 0;
+}
+
+.rightBar {
+    top: 62px;
+    right: 0;
+    width: 300px;
+    bottom: 20px;
+}
+.rsaquo{
+    float: left;
+    height: 100%;
+    width: 15px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+#rsaquo{
+    color:#fff;
+    height: 40px;
+}
+.input-content{
+  /*  border: 1px solid #eee;*/
+    height: 100%;
+    margin-left: 10px;
+    /*width:100%;*/
+    float: left;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+#btn-draw1,#btn-draw2,#btn-draw3,#btn-clear{
+	margin-top: 2%;
+	margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+}
+
+#maptool{
+	width: 95%;
+    margin-left: 10%;
+    position: absolute;
+    top: 1%;
+}

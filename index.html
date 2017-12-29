@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林丹李宗伟2012伦敦奥运会男单决赛</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style/bootstrap-responsive.min.css" />
+    <script src="./libs/jquery.js"></script>
+    <script type="text/javascript" include="leaflet.draw" src="./libs/dist/include-leaflet.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <!–[if IE]>
+    <script src="./libs/html5.js"></script>
+    <script src="./libs/css3-mediaqueries.js"></script>
+    <![endif]–>
+</head>
+<body>
+    <div id="mapDiv"></div>
+    <div class="topBar floatBar">
+      <div class="content">
+          <iframe width="225" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=8&color=%23FFFF00&icon=1&num=1&site=14"></iframe>
+       <div class="legend">
+          <div class="legend-content">
+              <div class="legend-colordiv">
+                <div class="legend-color lgd1"></div>
+                <div class="legend-color lgd2"></div>
+                <div class="legend-color lgd3"></div>
+              </div>
+              <div class="legend-namediv">
+                <div class="legend-name">林丹</div>
+                <div class="legend-name">李宗伟</div>
+                <div class="legend-name">落地失误</div>
+              </div>
+          </div>
+       </div>
+       <span class="nav-title">{{title}}&nbsp;&nbsp;&nbsp;&nbsp;{{date}} {{time}}</span>
+       </div>
+    </div>
+    <div class="rightBar floatBar">
+      <div class="input-content">
+      </div>
+      <div class="rsaquo">
+        <div id="rsaquo">></div>
+      </div>
+      <div id="maptool">
+        <input type="button" id="btn-draw1" class="btn map_tool" value="显示林丹击球点热力图" onclick="query('1')"/>
+        <input type="button" id="btn-draw2" class="btn map_tool" value="显示李宗伟击球点热力图" onclick="query('2')"/>
+        <input type="button" id="btn-draw3" class="btn map_tool" value="显示失误球点热力图" onclick="query('3')"/>
+        <input type="button" id="btn-clear" class="btn map_tool" value="清  除" onclick="clearAll()"/>
+      </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/vue.js"></script>
+<script type="text/javascript"> 
+var clock = new Vue({ 
+    el: '.topBar', 
+    data: { 
+        title:"林丹VS李宗伟2012伦敦奥运会男单决赛",
+        time: '', 
+        date: '' 
+    } 
+}); 
+var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']; 
+var timerID = setInterval(updateTime, 1000); 
+updateTime(); 
+function updateTime() { 
+    var cd = new Date(); 
+    clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2); 
+    clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()]; 
+}; 
+
+//补零格式化时间与日期
+function zeroPadding(num, digit) { 
+    var zero = ''; 
+    for(var i = 0; i < digit; i++) { 
+        zero += '0'; 
+    } 
+    return (zero + num).slice(-digit); 
+} 
+</script>
+
+</html>

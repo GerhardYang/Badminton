@@ -33,11 +33,3 @@ map.on(L.Draw.Event.CREATED,
 //	    }
 	    editableLayers.addLayer(layer);
 });
-
-/**
- * 清除所有
- */
-function clearAll(){
-	//移除热力图图层
-	map.removeLayer(resultLayer);
-}

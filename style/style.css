@@ -123,17 +123,6 @@ body{
     color:#fff;
     height: 40px;
 }
-<<<<<<< HEAD
-=======
-.input-content{
-    /*border: 1px solid #eee;*/
-    height: 100%;
-    margin-left: 10px;
-    /*width:100%;*/
-    float: left;
-}
-
->>>>>>> adb12da9cc21adf8afe5f3c8e9475491d730811b
 iframe {
     position: absolute;
     top: 0;

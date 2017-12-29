@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>林丹李宗伟2012伦敦奥运会男单决赛</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="style/bootstrap-responsive.min.css" />
+    <!--引用layui库-->
+    <script type="text/javascript" src="libs/layui/layui.js"></script>
+    <link rel="stylesheet" href="libs/layui/css/layui.css" />
+    <!--引用bootstrap库-->
+    <!--<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style/bootstrap-responsive.min.css" />-->
     <script src="./libs/jquery.js"></script>
     <script type="text/javascript" include="leaflet.draw" src="./libs/dist/include-leaflet.js"></script>
     <script type="text/javascript" src="http://cdn.bootcss.com/leaflet.heat/0.2.0/leaflet-heat.js"></script>
@@ -46,10 +50,10 @@
         <div id="rsaquo">></div>
       </div>
       <div id="maptool">
-        <input type="button" id="btn-draw1" class="btn map_tool" value="显示林丹击球点热力图" onclick="query('1')"/>
-        <input type="button" id="btn-draw2" class="btn map_tool" value="显示李宗伟击球点热力图" onclick="query('2')"/>
-        <input type="button" id="btn-draw3" class="btn map_tool" value="显示失误球点热力图" onclick="query('3')"/>
-        <input type="button" id="btn-clear" class="btn map_tool" value="清  除" onclick="clearAll()"/>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="query('1')"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>显示林丹击球点热力图</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="query('2')"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>显示李宗伟击球点热力图</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="query('3')"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>显示失误球点热力图</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clearAll()"><i class="layui-icon" style="font-size: 30px; color: #003BB3;">&#xe640;</i>清&nbsp;&nbsp;除</button>
       </div>
     </div>
 </body>

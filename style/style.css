@@ -24,7 +24,7 @@ body{
 
 .floatBar {
     position: absolute;
-    background: rgba(100, 100, 100, 0.6);
+    background: rgba(81, 81, 81, 0.6);
     /* border-radius: 3px;*/
 }
 
@@ -137,16 +137,14 @@ iframe {
     right: 20px;
 }
 
-#btn-draw1,#btn-draw2,#btn-draw3,#btn-clear{
-	margin-top: 2%;
-	margin-left: 2%;
-    margin-right: 2%;
-    width: 96%;
-}
-
 #maptool{
 	width: 95%;
     margin-left: 10%;
     position: absolute;
     top: 1%;
+}
+
+.btn-maptool{
+    margin-top: 1%;
+    width: 94%;
 }

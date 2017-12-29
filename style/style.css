@@ -123,14 +123,6 @@ body{
     color:#fff;
     height: 40px;
 }
-.input-content{
-    /*border: 1px solid #eee;*/
-    height: 100%;
-    margin-left: 10px;
-    /*width:100%;*/
-    float: left;
-}
-
 iframe {
     position: absolute;
     top: 0;
@@ -138,8 +130,8 @@ iframe {
 }
 
 #maptool{
-	width: 95%;
-    margin-left: 10%;
+	width: 100%;
+    padding-left: 20px;
     position: absolute;
     top: 1%;
 }

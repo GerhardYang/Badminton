@@ -28,14 +28,13 @@ $('#rsaquo').click(function hideRightBar() {
         $('.rightBar').width(300);
         rsaquoClicked = false;
         $("#rsaquo").text(">");
-        // $(".map_tool").css("display","block");
+        //$(".map_tool").css("display","block");
     } else {
         $('.rightBar').width(20);
         rsaquoClicked = true;
         $("#rsaquo").text("<");
-        // $(".map_tool").css("display","none");
+        //$(".map_tool").css("display","none");
     }
-
 });
 
 /**

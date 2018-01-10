@@ -1,7 +1,7 @@
 /**
  * rest查询方法
  */
-function query() {
+function query(obj) {
 	//查询对应rest图层的数据集
     var param = new SuperMap.QueryBySQLParameters({
         queryParams: {
@@ -34,8 +34,17 @@ function query() {
             		err++;
             	}
             }
+            //根据不同的参数显示不同的热力图
+            if(obj == '1'){
+            	loadHeatMap(pointArrayLIN);
+            }else if(obj == '2'){
+            	loadHeatMap(pointArrayLI);
+            }else{
+            	loadHeatMap(errorArray);
+            }
         });
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 function queryEvery(obj) {
@@ -68,3 +77,5 @@ function hotpoint(obj){
     }
 >>>>>>> master
 }
+=======
+>>>>>>> parent of 1a9dac8... 添加统计图，并修改右侧列表样式

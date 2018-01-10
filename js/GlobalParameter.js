@@ -1,8 +1,11 @@
 var urlbadminton = "https://www.supermapol.com/iserver/services/map_data20/rest/maps/AllPoint@data";
 var vectorLayer;
 var map, resultLayer;//热力图层
+<<<<<<< HEAD
 var polyLineLayer;//击球路线图层
 var geoLayer;//几何查询图层
+=======
+>>>>>>> parent of 1a9dac8... 添加统计图，并修改右侧列表样式
 
 var pointArrayLIN = [];//林
 var pointArrayLI = [];//李

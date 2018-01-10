@@ -129,7 +129,7 @@ iframe {
     right: 20px;
 }
 
-#maptool,#datacharts,#hotpoints{
+#maptool{
 	width: 100%;
     padding-left: 20px;
     position: absolute;
@@ -139,9 +139,4 @@ iframe {
 .btn-maptool{
     margin-top: 1%;
     width: 94%;
-}
-
-.Allcharts{
-	width: 640px;
-	height: 450px;
 }

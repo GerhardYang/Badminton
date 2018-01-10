@@ -1,7 +1,7 @@
 /**
  * rest查询方法
  */
-function query(obj) {
+function query() {
 	//查询对应rest图层的数据集
     var param = new SuperMap.QueryBySQLParameters({
         queryParams: {
@@ -34,17 +34,10 @@ function query(obj) {
             		err++;
             	}
             }
-            //根据不同的参数显示不同的热力图
-            if(obj == '1'){
-            	loadHeatMap(pointArrayLIN);
-            }else if(obj == '2'){
-            	loadHeatMap(pointArrayLI);
-            }else{
-            	loadHeatMap(errorArray);
-            }
         });
 }
 
+<<<<<<< HEAD
 function queryEvery(obj) {
     //查询对应rest图层的数据集
     var param = new SuperMap.QueryBySQLParameters({
@@ -62,4 +55,16 @@ function queryEvery(obj) {
             linePointArray = features;
                 loadHeatMap(linePointArray);
         });
+=======
+function hotpoint(obj){
+	query();
+	//根据不同的参数显示不同的热力图
+    if(obj == '1'){
+    	loadHeatMap(pointArrayLIN);
+    }else if(obj == '2'){
+    	loadHeatMap(pointArrayLI);
+    }else{
+    	loadHeatMap(errorArray);
+    }
+>>>>>>> master
 }

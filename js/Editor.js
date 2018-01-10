@@ -28,6 +28,8 @@ map.on(L.Draw.Event.CREATED,
 	function (e) {
 	    var type = e.layerType,
 	        layer = e.layer;
+	    var bounds = layer._bounds;
+	    var style = layer.options;
 //	    if (type === 'marker') {
 //	        layer.bindPopup('A popup!');
 //	    }

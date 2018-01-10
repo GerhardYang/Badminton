@@ -2,7 +2,7 @@
  * 选择图表
  */
 function clickchart(obj){
-	query();
+	//query();
 	//根据不同的参数显示不同的图表
 	switch(obj){
 		case 1:

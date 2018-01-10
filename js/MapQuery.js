@@ -1,3 +1,7 @@
+$(document).ready(function(){
+	query();
+});
+
 /**
  * rest查询方法
  */
@@ -57,7 +61,7 @@ function queryEvery(obj) {
 }
 
 function hotpoint(obj){
-	query();
+	//query();
 	//根据不同的参数显示不同的热力图
     if(obj == '1'){
     	loadHeatMap(pointArrayLIN);

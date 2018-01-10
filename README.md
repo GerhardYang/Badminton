@@ -5,7 +5,7 @@
 
 ## 项目演示地址： http://sunshine.help/Badminton/index.html
 
-## 贡献者： Gerhard  Alanwhy
+## 贡献者： Gerhard  &  Alanwhy
 
 
 :heart: :heart: :heart: :heart: :heart:

@@ -37,6 +37,25 @@ function query() {
         });
 }
 
+<<<<<<< HEAD
+function queryEvery(obj) {
+    //查询对应rest图层的数据集
+    var param = new SuperMap.QueryBySQLParameters({
+        queryParams: {
+            name: "point@test#1",
+            attributeFilter: "回合 = 2 AND 击球方 = 1 "
+        }
+    });
+    //解析返回结果
+    L.supermap
+        .queryService(urlbadminton)
+        .queryBySQL(param, function (serviceResult) {
+            // var result = serviceResult.result;
+            var features = serviceResult.result.recordsets[0].features.features;
+            linePointArray = features;
+                loadHeatMap(linePointArray);
+        });
+=======
 function hotpoint(obj){
 	query();
 	//根据不同的参数显示不同的热力图
@@ -47,4 +66,5 @@ function hotpoint(obj){
     }else{
     	loadHeatMap(errorArray);
     }
+>>>>>>> master
 }

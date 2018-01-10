@@ -7,11 +7,11 @@ function clickchart(obj){
 	switch(obj){
 		case 1:
 			openLayer();
-			Chartinit(pointArrayLIN);
+			Chartinit(pointArrayLIN,"林丹");
 			break;
 		case 2:
 			openLayer();
-			Chartinit(pointArrayLI);
+			Chartinit(pointArrayLI,"李宗伟");
 			break;
 	}
 }
@@ -20,7 +20,7 @@ function clickchart(obj){
  * 初始化统计图
  * @param {Object} ArrObj
  */
-function Chartinit(ArrObj){
+function Chartinit(ArrObj,name){
 	var batbox = document.getElementById('bat_box');//击球位置类
 	var batdir = document.getElementById('bat_dir');//击球方向类
 	//基于准备好的dom，初始化echarts实例
@@ -88,7 +88,7 @@ function Chartinit(ArrObj){
 	//指定图表的配置项和数据
 	var option_batbox = {
 		title:{
-			text:'击球技术类型-位置'
+			text:name + ':击球技术类型-位置'
 		},
 		tooltip:{},
 		legend:{
@@ -107,7 +107,7 @@ function Chartinit(ArrObj){
 	
 	var option_batdir = {
 		title:{
-			text:'击球技术类型-方向'
+			text:name + ':击球技术类型-方向'
 		},
 		tooltip:{},
 		legend:{

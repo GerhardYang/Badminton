@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>林丹李宗伟2012伦敦奥运会男单决赛</title>
+    <script type="text/javascript" src="./libs/jquery.min.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <!--引用layui库-->
-    <script type="text/javascript" src="libs/layui/layui.js"></script>
-    <link rel="stylesheet" href="libs/layui/css/layui.css" />
-    <!--引用bootstrap库-->
-    <!--<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="style/bootstrap-responsive.min.css" />-->
-    <script src="./libs/jquery.js"></script>
+    <script type="text/javascript" src="./libs/layui/layui.js"></script>
+    <link rel="stylesheet" href="./libs/layui/css/layui.css" />
+    <!--引用echart库-->
+    <script type="text/javascript" src="./libs/echarts/echarts.js" ></script>
+    <!--引用layer库-->
+    <script type="text/javascript" src="./libs/layer/layer.js"></script>
+    <link rel="stylesheet" href="libs/layer/theme/default/layer.css" />
+    <!--引用leaflet插件-->
     <script type="text/javascript" include="leaflet.draw" src="./libs/dist/include-leaflet.js"></script>
     <script type="text/javascript" src="http://cdn.bootcss.com/leaflet.heat/0.2.0/leaflet-heat.js"></script>
-    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
     <!–[if IE]>
     <script src="./libs/html5.js"></script>
     <script src="./libs/css3-mediaqueries.js"></script>
@@ -48,14 +51,25 @@
     <div class="rightBar floatBar">
       <div class="rsaquo">
         <div id="rsaquo">></div>
-      </div>
+      </div><!--rsaquo结束-->
       <div id="maptool">
-      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="query('1')"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>显示林丹击球点热力图</button>
-      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="query('2')"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>显示李宗伟击球点热力图</button>
-      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="query('3')"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>显示失误球点热力图</button>
+		<button class="layui-btn layui-btn-lg btn-maptool" onclick="switchMenu(2)"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>数据热力图</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="switchMenu(1)"><i class="layui-icon" style="font-size: 30px; color: #000000;">&#xe638;</i>数据统计图</button>
       	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clearAll()"><i class="layui-icon" style="font-size: 30px; color: #003BB3;">&#xe640;</i>清&nbsp;&nbsp;除</button>
-      </div>
-    </div>
+      </div><!--maptool结束-->
+      <div id="datacharts" style="display: none;">
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clickchart(1)"><i class="layui-icon" style="font-size: 30px; color: #000000;">&#xe62d;</i>林丹数据统计</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clickchart(2)"><i class="layui-icon" style="font-size: 30px; color: #000000;">&#xe62d;</i>李宗伟数据统计</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="backmain(1)"><i class="layui-icon" style="font-size: 30px; color: #FFFFFF;">&#xe65c;</i>返&nbsp;&nbsp;回</button>
+      </div><!--datacharts结束-->
+      <div id="hotpoints" style="display: none;">
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="hotpoint('1')"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>显示林丹击球点热力图</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="hotpoint('2')"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>显示李宗伟击球点热力图</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="hotpoint('3')"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>显示失误球点热力图</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clearAll()"><i class="layui-icon" style="font-size: 30px; color: #003BB3;">&#xe640;</i>清&nbsp;&nbsp;除</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="backmain(2)"><i class="layui-icon" style="font-size: 30px; color: #FFFFFF;">&#xe65c;</i>返&nbsp;&nbsp;回</button>
+      </div><!--hotpoints结束-->
+    </div><!--rightBar结束-->
 </body>
  	<script type="text/javascript" src="./js/GlobalParameter.js"></script><!--全局变量-->
     <script type="text/javascript" src="./js/Map.js"></script><!--地图加载-->
@@ -64,4 +78,5 @@
     <script type="text/javascript" src="./js/Editor.js"></script><!--编辑控件-->
 	<script type="text/javascript" src="./js/PageVue.js"></script><!--基础布局-->
  	<script type="text/javascript" src="./js/CSSControler.js"></script><!--菜单栏控制-->
+ 	<script type="text/javascript" src="./js/dataCharts.js"></script><!--显示图表数据-->
 </html>

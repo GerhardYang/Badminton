@@ -55,8 +55,11 @@
       <div id="maptool">
 		<button class="layui-btn layui-btn-lg btn-maptool" onclick="switchMenu(2)"><i class="layui-icon" style="font-size: 30px; color: #E9322D;">&#xe756;</i>数据热力图&gt;&gt;</button>
       	<button class="layui-btn layui-btn-lg btn-maptool" onclick="switchMenu(1)"><i class="layui-icon" style="font-size: 30px; color: #000000;">&#xe638;</i>数据统计图&gt;&gt;</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="switchMenu(3)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>羽毛球运行轨迹图&gt;&gt;</button>
       	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clearAll()"><i class="layui-icon" style="font-size: 30px; color: #003BB3;">&#xe640;</i>清&nbsp;&nbsp;除</button>
       </div><!--maptool结束-->
+      
+      
       <div id="datacharts" style="display: none;">
       	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clickchart(1)"><i class="layui-icon" style="font-size: 30px; color: #000000;">&#xe62d;</i>林丹数据统计</button>
       	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clickchart(2)"><i class="layui-icon" style="font-size: 30px; color: #000000;">&#xe62d;</i>李宗伟数据统计</button>
@@ -69,6 +72,135 @@
       	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clearAll()"><i class="layui-icon" style="font-size: 30px; color: #003BB3;">&#xe640;</i>清&nbsp;&nbsp;除</button>
       	<button class="layui-btn layui-btn-lg btn-maptool" onclick="backmain(2)"><i class="layui-icon" style="font-size: 30px; color: #FFFFFF;">&#xe65c;</i>返&nbsp;&nbsp;回</button>
       </div><!--hotpoints结束-->
+      <div id="runtrack" style="display: none;">
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="switchRunMenu(1)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>第一局</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="switchRunMenu(2)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>第二局</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="switchRunMenu(3)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>决胜局</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="backmain(3)"><i class="layui-icon" style="font-size: 30px; color: #FFFFFF;">&#xe65c;</i>返&nbsp;&nbsp;回</button>
+      </div><!--runtrack结束-->
+      
+      
+      <div id="runtrack_son_1" style="display: none;">
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="backmain(4)"><i class="layui-icon" style="font-size: 30px; color: #FFFFFF;">&#xe65c;</i>返&nbsp;&nbsp;回</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clearAll()"><i class="layui-icon" style="font-size: 30px; color: #003BB3;">&#xe640;</i>清&nbsp;&nbsp;除</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,1)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,2)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,3)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,4)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,5)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,6)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,7)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,8)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,9)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,10)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,11)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,12)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,13)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,14)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,15)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,16)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,17)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,18)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,19)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第十九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,20)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,21)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,22)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,23)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,24)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,25)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,26)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,27)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,28)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,29)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第二十九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,30)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第三十回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,31)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第三十一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,32)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第三十二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,33)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第三十三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,34)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第三十四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,35)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第三十五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(1,36)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.1第三十六回合</button>
+      </div><!--runtrack_son_1结束-->
+      <div id="runtrack_son_2" style="display: none;">
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="backmain(5)"><i class="layui-icon" style="font-size: 30px; color: #FFFFFF;">&#xe65c;</i>返&nbsp;&nbsp;回</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clearAll()"><i class="layui-icon" style="font-size: 30px; color: #003BB3;">&#xe640;</i>清&nbsp;&nbsp;除</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,1)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,2)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,3)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,4)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,5)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,6)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,7)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,8)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,9)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,10)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,11)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,12)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,13)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,14)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,15)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,16)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,17)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,18)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,19)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第十九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,20)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,21)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,22)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,23)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,24)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,25)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,26)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,27)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,28)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,29)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第二十九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,30)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第三十回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(2,31)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.2第三十一回合</button>
+      </div><!--runtrack_son_2结束-->
+      <div id="runtrack_son_3" style="display: none;">
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="backmain(6)"><i class="layui-icon" style="font-size: 30px; color: #FFFFFF;">&#xe65c;</i>返&nbsp;&nbsp;回</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="clearAll()"><i class="layui-icon" style="font-size: 30px; color: #003BB3;">&#xe640;</i>清&nbsp;&nbsp;除</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,1)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,2)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,3)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,4)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,5)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,6)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,7)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,8)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,9)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,10)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,11)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,12)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,13)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,14)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,15)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,16)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,17)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,18)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,19)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第十九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,20)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,21)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,22)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,23)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,24)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,25)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,26)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,27)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,28)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,29)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第二十九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,30)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,31)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十一回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,32)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十二回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,33)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十三回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,34)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十四回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,35)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十五回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,36)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十六回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,37)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十七回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,38)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十八回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,39)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第三十九回合</button>
+      	<button class="layui-btn layui-btn-lg btn-maptool" onclick="dataProcess(3,40)"><i class="layui-icon" style="font-size: 30px; color: #46A546;">&#xe62c;</i>No.3第四十回合</button>
+      </div><!--runtrack_son_3结束-->
+      
+      
     </div><!--rightBar结束-->
 </body>
  	<script type="text/javascript" src="./js/GlobalParameter.js"></script><!--全局变量-->
@@ -79,4 +211,5 @@
 	<script type="text/javascript" src="./js/PageVue.js"></script><!--基础布局-->
  	<script type="text/javascript" src="./js/CSSControler.js"></script><!--菜单栏控制-->
  	<script type="text/javascript" src="./js/dataCharts.js"></script><!--显示图表数据-->
+ 	<script type="text/javascript" src="./js/RunningTrack.js"></script><!--轨迹图-->
 </html>

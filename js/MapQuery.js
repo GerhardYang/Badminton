@@ -19,6 +19,7 @@ function query() {
         .queryBySQL(param, function (serviceResult) {
             var result = serviceResult.result;
             var features = serviceResult.result.recordsets[0].features.features;
+            AllpointArray = features;
             //林丹
             var lin = 0;
             //李宗伟

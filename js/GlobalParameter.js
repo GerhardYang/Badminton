@@ -4,8 +4,11 @@ var map, resultLayer;//热力图层
 var polyLineLayer;//击球路线图层
 var geoLayer;//几何查询图层
 
+var AllpointArray = [];//全部点
 var pointArrayLIN = [];//林
 var pointArrayLI = [];//李
 var errorArray = [];//失误
 
 var linePointArray = [];
+
+var runTrackLine;//轨迹线图

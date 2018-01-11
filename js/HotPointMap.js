@@ -32,5 +32,11 @@ function loadHeatMap(arr) {
  */
 function clearAll(){
 	//移除热力图图层
-	map.removeLayer(resultLayer);
+	if(resultLayer){
+		map.removeLayer(resultLayer);
+	}
+	//移除轨迹线图层
+	if(runTrackLine){
+		map.removeLayer(runTrackLine);	
+	}
 }

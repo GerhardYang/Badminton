@@ -39,4 +39,5 @@ function clearAll(){
 	if(runTrackLine){
 		map.removeLayer(runTrackLine);	
 	}
+    clearMarkers();
 }

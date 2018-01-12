@@ -1,3 +1,5 @@
+
+//页面加载完成查到全部数据
 $(document).ready(function(){
 	query();
 });

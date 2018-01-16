@@ -39,5 +39,16 @@ function clearAll(){
 	if(runTrackLine){
 		map.removeLayer(runTrackLine);	
 	}
+	//移除marker点
     clearMarkers();
+}
+
+/**
+ * 清除marker点
+ */
+function clearMarkers(){
+	if(myGroup){
+		myGroup.clearLayers();
+		markerLayer = [];
+	}
 }

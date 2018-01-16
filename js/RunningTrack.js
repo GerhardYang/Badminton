@@ -4,8 +4,13 @@
  */
 function drawTrackLine(rounds) {
 
-     map.removeLayer(badmintonLayer);
-
+    map.removeLayer(badmintonLayer);
+	//清除上一次的marker图层
+	if(myGroup != undefined){
+		myGroup.clearLayers();
+		markerLayer = [];
+	}
+	//清除上一次的轨迹图层
     if (runTrackLine != undefined) {
         map.removeLayer(runTrackLine);
         runTrackLine = undefined;
@@ -28,7 +33,7 @@ function drawTrackLine(rounds) {
        var marker =  L.marker(xyArr[i]);
        markerLayer.push(marker);
     }
-    var myGroup=L.layerGroup(markerLayer);
+    myGroup = L.layerGroup(markerLayer);
 
 	map.addLayer(myGroup); 
     myGroup.addTo(map).bindPopup("13414");

@@ -5,7 +5,7 @@ var vectorLayer;
 var map, resultLayer;//热力图层
 var polyLineLayer;//击球路线图层
 var geoLayer;//几何查询图层
-var markerLayer = [];//marker
+var markerLayer = [] , myGroup;//marker
 
 var AllpointArray = [];//全部点
 var pointArrayLIN = [];//林

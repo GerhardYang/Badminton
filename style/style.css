@@ -1,5 +1,10 @@
-body{
+body {
     overflow: hidden;
+    background: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 #mapDiv {
@@ -13,6 +18,7 @@ body{
     border: none;
     overflow: hidden;
     z-index: -9999;
+    opacity: 0.7;
 }
 
 .smControlAttribution {
@@ -62,21 +68,24 @@ body{
 .content .legend-color {
     float: left;
     margin: 0 6px;
-     margin-top: 5px;
+    margin-top: 5px;
     width: 50px;
     height: 30px;
     border-radius: 3px;
 }
- .lgd1 {
+
+.lgd1 {
 
     background-color: #79E8D0;
 }
- .lgd2 {
-    
+
+.lgd2 {
+
     background-color: #ffff00;
 }
- .lgd3 {
-    
+
+.lgd3 {
+
     background-color: #fff;
 }
 
@@ -111,39 +120,61 @@ body{
     width: 300px;
     bottom: 20px;
 }
-.rsaquo{
+
+.rsaquo {
     float: left;
     height: 100%;
-    width: 15px;
+    width: 20px;
     color: #fff;
     font-size: 30px;
+}
+
+#rsaquo {
+    color: #00ff00;
+    height: 35px;
+    width: 20px;
     cursor: pointer;
 }
-#rsaquo{
-    color:#fff;
-    height: 40px;
-}
+
 iframe {
     position: absolute;
     top: 0;
     right: 20px;
 }
 
-#maptool,#datacharts,#hotpoints,#runtrack,#runtrack_son_1,#runtrack_son_2,#runtrack_son_3{
-	width: 100%;
-    padding-left: 20px;
+#maptool,
+#datacharts,
+#hotpoints,
+#runtrack,
+#pointarea,
+#runtrack_son_1,
+#runtrack_son_2,
+#runtrack_son_3 {
+    width: 82%;
+    /*修改为margin界面隐藏显示恢复*/
+    margin-left: 30px;
+    margin-right: 20px;
     position: absolute;
-    top: 1%;
-    height: 98%;
+    top: 5%;
+    bottom: 70px;
     overflow: auto;
 }
 
-.btn-maptool{
-    margin-top: 1%;
-    width: 94%;
+.btn-maptool {
+    width: 100%;
 }
 
-.Allcharts{
-	width: 640px;
-	height: 450px;
+.Allcharts {
+    width: 640px;
+    height: 450px;
+}
+
+#funswitchs {
+    width: 82%;
+    height: 50px;
+    margin-right: 20px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }

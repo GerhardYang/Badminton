@@ -6,13 +6,12 @@ map = L.map('mapDiv', {
     // closePopupOnClick:false,
     center: [-4.5, 13],
     zoomControl: false,
-    maxZoom: 18,
+    minZoom: 6,
+    maxZoom: 12,
     zoom: 8
 });
-var courtLayer =  L.supermap.tiledMapLayer(urlCourt).addTo(map);
-var badmintonLayer = L.supermap.tiledMapLayer(urlbadminton,
-    {
-        transparent: true,
-        opacity: 0.9}).addTo(map);
-
-
+var courtLayer = L.supermap.tiledMapLayer(urlCourt).addTo(map);
+var badmintonLayer = L.supermap.tiledMapLayer(urlbadminton, {
+    transparent: true,
+    opacity: 0.9
+}).addTo(map);

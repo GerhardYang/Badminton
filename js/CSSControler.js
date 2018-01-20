@@ -8,12 +8,12 @@ $('#rsaquo').click(function hideRightBar() {
         $('.rightBar').width(300);
         rsaquoClicked = false;
         $("#rsaquo").text(">");
-        //$(".map_tool").css("display","block");
+        $(".map_tool").css("display", "block");
     } else {
         $('.rightBar').width(20);
         rsaquoClicked = true;
         $("#rsaquo").text("<");
-        //$(".map_tool").css("display","none");
+        $(".map_tool").css("display", "none");
     }
 });
 
@@ -34,7 +34,10 @@ function switchMenu(obj) {
             $("#maptool").hide();
             $("#runtrack").show();
             break;
-
+        case 4:
+            $("#maptool").hide();
+            $("#pointarea").show();
+            break;
     }
 }
 
@@ -85,18 +88,32 @@ function backmain(obj) {
  * @param {Object} obj
  */
 function switchRunMenu(obj) {
+    /**
+     * 循环添加回合HTML内容大幅缩减代码量
+     */
+    function addroundsHTML(obj, rounds, id) {
+        for (var i = rounds; i > 0; i--) {
+            var insertHtml = "<button class='layui-btn layui-btn-lg btn-maptool' onclick='dataProcess(" + obj + ", " + i + ")'><i class ='layui-icon' style='font-size:30px;color:#46A546;'>&#xe62c;</i>No." + obj + "第" + i + "回合</button> ";
+            $(id).find('button').eq(1).after(insertHtml);
+            // console.log(insertHtml);
+        }
+    }
+
     switch (obj) {
         case 1:
             $("#runtrack").hide();
             $("#runtrack_son_1").show();
+            addroundsHTML(obj, 36, "#runtrack_son_1");
             break;
         case 2:
             $("#runtrack").hide();
             $("#runtrack_son_2").show();
+            addroundsHTML(obj, 31, "#runtrack_son_2");
             break;
         case 3:
             $("#runtrack").hide();
             $("#runtrack_son_3").show();
+            addroundsHTML(obj, 40, "#runtrack_son_3");
             break;
     }
 }

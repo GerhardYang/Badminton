@@ -3,7 +3,7 @@
 
 ![image](https://github.com/GerhardYang/Badminton/raw/master/img/point.png)
 
-## 项目演示地址： http://sunshine.help/Badminton/index.html
+## 项目演示地址： http://supermap.group/Badminton/index.html
 
 ## 贡献者： Gerhard  &  Alanwhy
 

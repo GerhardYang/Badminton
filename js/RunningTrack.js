@@ -27,16 +27,16 @@ function drawTrackLine(rounds) {
         }
     }
 
-      //绘制点
+    //绘制点
     for (var i = 0; i < xyArr.length; i++) {
-       // var contentHtml = i+1+ "";
+       //var contentHtml = i+1+ "";
        var marker =  L.marker(xyArr[i]);
        markerLayer.push(marker);
     }
     myGroup = L.layerGroup(markerLayer);
-
+	
 	map.addLayer(myGroup); 
-    myGroup.addTo(map).bindPopup("13414");
+    //myGroup.addTo(map).bindPopup("13414");
 
     //绘制轨迹线
     runTrackLine = new L.polyline(xyArr, {
@@ -44,6 +44,9 @@ function drawTrackLine(rounds) {
         opacity: 0.7,
         weight: 3
     }).addTo(map);
+    
+    //加载动态效果图层
+ 	loadData();
 }
 
 /**
@@ -65,4 +68,11 @@ function dataProcess(num, rounds) {
     }
 
     drawTrackLine(needRounds);
+}
+
+/**
+ * 动态显示轨迹
+ */
+function loadData(){
+	
 }

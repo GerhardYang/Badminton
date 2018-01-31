@@ -15,3 +15,4 @@ var errorArray = [];//失误
 var linePointArray = [];
 
 var runTrackLine;//轨迹线图
+var mapVlayers;//动态轨迹图层

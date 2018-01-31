@@ -15,6 +15,7 @@ function drawTrackLine(rounds) {
         map.removeLayer(runTrackLine);
         runTrackLine = undefined;
     }
+    
     var xyArr = [];
     var j = 1; //某局某回合的球ID
     //将x，y坐标取出
@@ -27,7 +28,7 @@ function drawTrackLine(rounds) {
         }
     }
 
-      //绘制点
+    //绘制点
     for (var i = 0; i < xyArr.length; i++) {
        // var contentHtml = i+1+ "";
        var marker =  L.marker(xyArr[i]);
@@ -44,6 +45,9 @@ function drawTrackLine(rounds) {
         opacity: 0.7,
         weight: 3
     }).addTo(map);
+    
+    //加载动态轨迹
+    loadData(rounds);
 }
 
 /**
@@ -65,4 +69,55 @@ function dataProcess(num, rounds) {
     }
 
     drawTrackLine(needRounds);
+}
+
+
+/**
+ * 动态图层加载
+ * @param {Object} newData
+ */
+function loadData(newData){
+	var timeData = [];
+	var j = 0;
+	
+	//leaflet只识别经纬度坐标，需要将数据中的米坐标转成经纬度坐标
+    var projection = L.CRS.EPSG3857.projection;
+	
+	for(var i = 0;i<newData.length;i++){
+		var newX = newData[i].geometry.coordinates[0] * 1100;
+		var newY = newData[i].geometry.coordinates[1] * 1100;
+		
+		var latLng = projection.unproject(L.point([newX, newY]));
+		
+		timeData.push({
+			geometry:{
+				type:'Point',
+				coordinates: [latLng.lng +8.67, latLng.lat-5.05]
+			},
+			count:1,
+			time:j
+		});
+		j += 2;
+	}
+
+	var dataSet2 = new mapv.DataSet(timeData);
+
+	var options2 = {
+        fillStyle: 'rgba(255, 255, 255, 0.2)',
+        globalCompositeOperation: "lighter",
+        size: 3,
+        animation: {
+            stepsRange: {
+                start: 0,
+                end: 50
+            },
+            trails: 5,
+            duration: 15,
+        },
+        draw: 'simple'
+    };
+   
+    //动态轨迹图层
+    mapVlayers = L.supermap.mapVLayer(dataSet2, options2);
+    mapVlayers.addTo(map);  
 }
